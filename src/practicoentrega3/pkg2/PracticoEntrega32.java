@@ -11,11 +11,12 @@ public class PracticoEntrega32 {
         //@param args the command line arguments
     public static void main(String[] args) {
      Scanner sc = new Scanner(System.in);    
-        
+     int cant;   
      System.out.print("Ingrese tamaño de la pila: ");
-        Pila pila1=new Pila(sc.nextInt());
+        cant=sc.nextInt();
+        Pila pila1=new Pila(cant);
         Pila pila2=new Pila(pila1.getTam());
-        Pila pila3=new Pila(pila1.getTam());
+
         
         
         

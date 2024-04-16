@@ -18,6 +18,39 @@ public class Pila {
         this.tam=tam;
     }
     
+    public void llenarPila(){
+       for(int i=tam;i<=1;i--){
+        push(i);
+        } 
+    }
+    
+    public void aSegundaPila(Pila pila2){
+        Pila pilaAux=new Pila(tam);
+        
+        pila2.push(getElementoTope());
+        pop();
+        pilaAux.push(getElementoTope());
+        pop();
+        
+        pilaAux.push(pila2.getElementoTope());
+        pila2.pop();
+        pilaAux.push(pila2.getElementoTope());
+        pila2.pop();
+        
+        pila2.push(getElementoTope());
+        pop();
+        
+        push(pilaAux.getElementoTope());
+        pilaAux.pop();
+        
+        pila2.push(pilaAux.getElementoTope());
+        pilaAux.pop();
+        
+        pila2.push(getElementoTope());
+        pop();
+        
+    }
+    
     
     
     public int getTam() {

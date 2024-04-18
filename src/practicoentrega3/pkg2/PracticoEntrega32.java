@@ -24,6 +24,10 @@ public class PracticoEntrega32 {
         System.out.println(cad2+" está equilibrada?: " + pilaEjercicioB2.ejercicioB(cad2));
         System.out.println(cad3+" está equilibrada?: " + pilaEjercicioB3.ejercicioB(cad3));
         
-    }
-
+    
+    //segunda parte//
+        int numDiscos = 3;
+        JuegoTorresHanoi juego = new JuegoTorresHanoi(numDiscos);
+        juego.jugar();
+}
 }

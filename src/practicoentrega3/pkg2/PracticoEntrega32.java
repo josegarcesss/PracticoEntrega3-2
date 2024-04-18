@@ -26,7 +26,7 @@ public class PracticoEntrega32 {
         
     
     //segunda parte//
-        int numDiscos = 3;
+        int numDiscos = 5;
         JuegoTorresHanoi juego = new JuegoTorresHanoi(numDiscos);
         juego.jugar();
 }

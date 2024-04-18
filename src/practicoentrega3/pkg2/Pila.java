@@ -25,35 +25,6 @@ public class Pila {
         } 
     }
     
-    public void aSegundaPila(Pila pila2){
-        Pila pilaAux=new Pila(tam);
-        
-        pila2.push(getElementoTope());
-        pop();
-        pilaAux.push(getElementoTope());
-        pop();
-        
-        pilaAux.push(pila2.getElementoTope());
-        pila2.pop();
-        pilaAux.push(pila2.getElementoTope());
-        pila2.pop();
-        
-        pila2.push(getElementoTope());
-        pop();
-        
-        push(pilaAux.getElementoTope());
-        pilaAux.pop();
-        
-        pila2.push(pilaAux.getElementoTope());
-        pilaAux.pop();
-        
-        pila2.push(getElementoTope());
-        pop();
-        
-    }
-    
-    
-    
     public int getTam() {
         return tam;
     }    
@@ -100,28 +71,6 @@ public class Pila {
             return pila[tope];
         }
     }
-   
-    public void invierteSimple(){
-        Pila pilaAux1=new Pila(tam);
-        Pila pilaAux2=new Pila(tam);
-        if(pilaVacia()){
-            System.out.println("No hay elementos en la fila!");
-        }else{
-            for (int i=tope;i>-1;i--){
-            pilaAux1.push(getElementoTope());
-            pop();                        
-            }
-            for (int i=tope;i>-1;i--){
-            pilaAux2.push(pilaAux1.getElementoTope());
-            pilaAux1.pop();                        
-            }
-            for (int i=tope;i>-1;i--){
-            push(pilaAux2.getElementoTope());
-            pilaAux2.pop();                        
-            }
-        }
-    }
-    
         
     public boolean ejercicioB(String cad){
         Pila pila = new Pila(cad.length());        
